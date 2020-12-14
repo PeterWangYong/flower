@@ -1,0 +1,10 @@
+<!--pages/welcome/welcome.wxml-->
+
+<view class="container">
+  <!-- <image class="avatar" src="/images/avatar/1.png"></image> -->
+  <l-avatar class="l-avatar" open-data="{{['userAvatarUrl']}}" size="180" />
+  <text class="motto">Hello,Peter</text>
+  <view bind:tap="onTap" class="journey-container">
+    <text class="journey">开启小程序之旅</text>
+  </view>
+</view>

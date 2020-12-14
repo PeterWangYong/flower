@@ -1,0 +1,24 @@
+.movie-list {
+  margin-bottom: 30rpx;
+}
+
+ex-search-bar {
+  height: 90rpx !important;
+}
+
+page {
+  background-color: #f2f2f2;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30rpx 28rpx;
+}
+
+.search-container::after {
+  content: '';
+  width: 200rpx;
+}
