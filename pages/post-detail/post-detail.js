@@ -54,24 +54,24 @@ Page({
     
   },
 
-  onMusicStart(event) {
-    const mgr = this.data._mgr
-    const music = this.data.postData.music
-    mgr.src = music.url
-    mgr.title = music.title
-    mgr.coverImgUrl = music.coverImg
-    app.gIsPlayingMusic = true
-    app.gIsPlayingPostId = this.data._pid
-    this.setData({isPlaying: true})
-  },
+  // onMusicStart(event) {
+  //   const mgr = this.data._mgr
+  //   const music = this.data.postData.music
+  //   mgr.src = music.url
+  //   mgr.title = music.title
+  //   mgr.coverImgUrl = music.coverImg
+  //   app.gIsPlayingMusic = true
+  //   app.gIsPlayingPostId = this.data._pid
+  //   this.setData({isPlaying: true})
+  // },
 
-  onMusicStop(event) {
-    const mgr = this.data._mgr
-    mgr.pause()
-    app.gIsPlayingMusic = false
-    // app.gIsPlayingPostId = -1
-    this.setData({isPlaying: false})
-  },
+  // onMusicStop(event) {
+  //   const mgr = this.data._mgr
+  //   mgr.pause()
+  //   app.gIsPlayingMusic = false
+  //   // app.gIsPlayingPostId = -1
+  //   this.setData({isPlaying: false})
+  // },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

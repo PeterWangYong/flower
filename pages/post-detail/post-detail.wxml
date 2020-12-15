@@ -1,7 +1,7 @@
 <view class="container">
   <image class="head-image" src="{{postData.headImgSrc}}"></image>
-  <image wx:if="{{!isPlaying}}" bind:tap="onMusicStart" class="audio" src="../../images/icon/music-start.png" />
-  <image wx:else bind:tap="onMusicStop" class="audio" src="../../images/icon/music-stop.png" />
+  <!-- <image wx:if="{{!isPlaying}}" bind:tap="onMusicStart" class="audio" src="../../images/icon/music-start.png" />
+  <image wx:else bind:tap="onMusicStop" class="audio" src="../../images/icon/music-stop.png" /> -->
   <view class="author-date">
     <image class="avatar" src="{{postData.avatar}}"></image>
     <text class="author">{{postData.author}}</text>
