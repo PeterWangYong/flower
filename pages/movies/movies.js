@@ -1,6 +1,5 @@
 // pages/movies/movies.js
 import {movieList, moviesAll} from '../../data/data'
-// const app = getApp()
 Page({
   /**
    * 页面的初始数据
@@ -17,36 +16,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    // wx.request({
-    //   url: app.gBaseUrl + 'in_theaters',
-    //   data: {
-    //     start: 0,
-    //     count: 3,
-    //   },
-    //   success: (res) => {
-    //     this.setData({ inTheaters: res.data.subjects })
-    //   },
-    // })
-    // wx.request({
-    //   url: app.gBaseUrl + 'coming_soon',
-    //   data: {
-    //     start: 0,
-    //     count: 3,
-    //   },
-    //   success: (res) => {
-    //     this.setData({ comingSoon: res.data.subjects })
-    //   },
-    // })
-    // wx.request({
-    //   url: app.gBaseUrl + 'top250',
-    //   data: {
-    //     start: 0,
-    //     count: 3,
-    //   },
-    //   success: (res) => {
-    //     this.setData({ top250: res.data.subjects })
-    //   },
-    // })
     this.setData({
       inTheaters: movieList.in_theaters.slice(0,3),
       comingSoon: movieList.coming_soon.slice(0,3),
@@ -66,17 +35,6 @@ Page({
     this.setData({
       searchResult: true,
     })
-    // wx.request({
-    //   url: app.gBaseUrl + 'search',
-    //   data: {
-    //     q: event.detail.value,
-    //   },
-    //   success: (res) => {
-    //     this.setData({
-    //       searchData: res.data.subjects,
-    //     })
-    //   },
-    // })
     const temp = []
     const searchData = moviesAll.filter(item => {
       if (item.title.match(event.detail.value)) {

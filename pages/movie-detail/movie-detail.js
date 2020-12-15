@@ -1,7 +1,6 @@
 // pages/movie-detail/movie-detail.js
 import {convertToCastInfos} from '../../utils/util'
 import {moviesAll} from '../../data/data'
-const app = getApp()
 Page({
 
   /**
@@ -16,12 +15,6 @@ Page({
    */
   onLoad: function (options) {
     const mid = options.mid
-    // wx.request({
-    //   url: app.gBaseUrl + 'subject/' + mid,
-    //   success: (res) => {
-    //     this.processMovieData(res.data)
-    //   }
-    // })
     const data = moviesAll.find(item => item.id === +mid)
     this.processMovieData(data)
   },

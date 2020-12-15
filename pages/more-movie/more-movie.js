@@ -1,6 +1,5 @@
 // pages/more-movie/more-movie.js
 import {movieList} from '../../data/data'
-const app = getApp()
 Page({
   /**
    * 页面的初始数据
@@ -16,16 +15,6 @@ Page({
   onLoad: function (options) {
     const type = options.type
     this.data._type = type
-    // wx.request({
-    //   url: app.gBaseUrl + type,
-    //   data: {
-    //     start: 0,
-    //     count: 12,
-    //   },
-    //   success: (res) => {
-    //     this.setData({ movies: res.data.subjects })
-    //   },
-    // })
     this.setData({
       movies: movieList[type].slice(0, 12)
     })
@@ -72,21 +61,6 @@ Page({
    */
   onPullDownRefresh: function () {
     console.log('pull down')
-    // wx.request({
-    //   url: app.gBaseUrl + this.data._type,
-    //   data: {
-    //     start: {
-    //       start: 0,
-    //       count: 12
-    //     }
-    //   },
-    //   success: (res) => {
-    //     this.setData({
-    //       movies: res.data.subjects
-    //     })
-    //     wx.stopPullDownRefresh()
-    //   }
-    // })
     this.setData({
       movies: movieList[this.data._type].slice(0,12)
     })
@@ -98,19 +72,6 @@ Page({
    */
   onReachBottom: function () {
     wx.showNavigationBarLoading()
-    // wx.request({
-    //   url: app.gBaseUrl + this.data._type,
-    //   data: {
-    //     start: this.data.movies.length,
-    //     count: 12
-    //   },
-    //   success: res => {
-    //     this.setData({
-    //         movies: this.data.movies.concat(res.data.subjects)
-    //     })
-    //     wx.hideNavigationBarLoading()
-    //   }
-    // })
     const currentNumber = this.data.movies.length
     this.setData({
       movies: this.data.movies.concat(movieList[this.data._type].slice(currentNumber, currentNumber + 12))
