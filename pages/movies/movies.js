@@ -1,6 +1,6 @@
 // pages/movies/movies.js
 import {movieList, moviesAll} from '../../data/data'
-const app = getApp()
+// const app = getApp()
 Page({
   /**
    * 页面的初始数据
@@ -48,9 +48,9 @@ Page({
     //   },
     // })
     this.setData({
-      inTheaters: movieList.in_theaters,
-      comingSoon: movieList.coming_soon,
-      top250: movieList.top250
+      inTheaters: movieList.in_theaters.slice(0,3),
+      comingSoon: movieList.coming_soon.slice(0,3),
+      top250: movieList.top250.slice(0,3)
       
     })
   },
@@ -77,9 +77,21 @@ Page({
     //     })
     //   },
     // })
-    const searchResult = moviesAll.filter(item => item.title.match(event.detail.value))
+    const temp = []
+    const searchData = moviesAll.filter(item => {
+      if (item.title.match(event.detail.value)) {
+        if (temp.indexOf(item.id) !== -1) { 
+          return false
+        } else {
+          temp.push(item.id)
+          return true
+        }
+      } else {
+        return false
+      }
+    })
     this.setData({
-      searchResult
+      searchData
     })
   },
 

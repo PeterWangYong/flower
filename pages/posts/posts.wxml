@@ -1,13 +1,13 @@
 <view>
   <swiper indicator-dots autoplay>
     <swiper-item>
-      <image data-post-id="3" bind:tap="onGoToDetail" src="/images/bestplayers.png" />
+      <image data-post-id="3" bind:tap="onGoToDetail" src="https://peter-public.oss-cn-hangzhou.aliyuncs.com/flower/images/post/headImg/bestplayers.png" />
     </swiper-item>
     <swiper-item>
-      <image data-post-id="0" bind:tap="onGoToDetail" src="/images/lpl.png" />
+      <image data-post-id="0" bind:tap="onGoToDetail" src="https://peter-public.oss-cn-hangzhou.aliyuncs.com/flower/images/post/headImg/lpl.png" />
     </swiper-item>
     <swiper-item>
-      <image data-post-id="4" bind:tap="onGoToDetail" src="/images/jumpfly.png" />
+      <image data-post-id="4" bind:tap="onGoToDetail" src="https://peter-public.oss-cn-hangzhou.aliyuncs.com/flower/images/post/headImg/jumpfly.png" />
     </swiper-item>
   </swiper>
 

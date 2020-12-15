@@ -48,7 +48,6 @@ Page({
       const result = await wx.showActionSheet({
         itemList: ['分享到QQ', '分享到微信', '分享到朋友圈'],
       })
-      console.log(result)
     } catch(err) {
       console.log(err)
     }
